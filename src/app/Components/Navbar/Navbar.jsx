@@ -1,9 +1,11 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
   return (
-    <header className="p-5 bg-red-800 text-center">
-      <h1 className="text-white text-2xl font-bold">Welcome here!</h1>
+    <header className="p-5 bg-red-800 text-center text-white ">
+      <h1 className="text-2xl font-bold">Welcome here!</h1>
+      <Link href="/">Home</Link>
     </header>
   );
 };
