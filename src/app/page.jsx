@@ -5,5 +5,11 @@ import styles from './page.module.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div>
+      <h1 className="text-5xl font-bold text-red-800 underline">
+        Hello world!
+      </h1>
+    </div>
+  );
 }
