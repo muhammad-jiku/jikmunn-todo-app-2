@@ -1,8 +1,10 @@
 import React from 'react';
+import SearchList from '../Components/Search/SearchList';
+
 const Search = () => {
   return (
     <div>
-      <h1>Search</h1>
+      <SearchList />
     </div>
   );
 };
