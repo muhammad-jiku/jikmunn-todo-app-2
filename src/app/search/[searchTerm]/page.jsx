@@ -5,6 +5,7 @@ const search = async (searchTerm) => {
   const res = await fetch(
     `https://serpapi.com/search.json?q=${searchTerm}&api_key=${process.env.API_KEY}`
   );
+  throw new Error('error');
   const data = await res.json();
   return data;
 };
