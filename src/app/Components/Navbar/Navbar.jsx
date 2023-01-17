@@ -7,6 +7,7 @@ const Navbar = () => {
       <h1 className="text-2xl font-bold">Welcome here!</h1>
       <Link href="/">Home</Link>
       <Link href="/todos">Todos</Link>
+      <Link href="/search">Search</Link>
     </header>
   );
 };
