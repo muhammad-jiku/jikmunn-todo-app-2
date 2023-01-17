@@ -1,4 +1,4 @@
-import Loading from '../../Components/Loading/Loading';
+import Loading from '../../../Components/Loading/Loading';
 import React from 'react';
 
 const loading = () => {

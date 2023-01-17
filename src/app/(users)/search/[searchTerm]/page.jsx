@@ -1,4 +1,4 @@
-import SearchList from '../../Components/Search/SearchList';
+import SearchList from '../../../Components/Search/SearchList';
 import React from 'react';
 
 const search = async (searchTerm) => {
