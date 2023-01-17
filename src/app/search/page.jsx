@@ -1,10 +1,10 @@
 import React from 'react';
-import SearchList from '../Components/Search/SearchList';
+import SearchText from '../Components/Search/SearchText';
 
 const Search = () => {
   return (
     <div>
-      <SearchList />
+      <SearchText />
     </div>
   );
 };

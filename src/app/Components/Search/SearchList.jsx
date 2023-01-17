@@ -1,30 +1,21 @@
-'use client';
+import Link from 'next/link';
+import React from 'react';
 
-import { useRouter } from 'next/navigation';
-import React, { useState } from 'react';
-
-const SearchList = () => {
-  const [search, setSearch] = useState('');
-  const router = useRouter();
-
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    setSearch('');
-    router.push(`/search/${search}`);
-  };
+const SearchList = ({ searchTerm, searchResults }) => {
   return (
     <div>
-      <form onSubmit={handleSearch}>
-        <input
-          type="text"
-          value={search}
-          placeholder="Search Here"
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <button type="submit" className="btn">
-          Search
-        </button>
-      </form>
+      <p className="text-gray-500 text-sm">You searched for: {searchTerm} </p>
+      <ol className="space-y-5 p-5">
+        {searchResults?.organic_results.map((result, idx) => (
+          <li key={idx} className="list-decimal">
+            <p className="font-bold">{result.title} </p>
+            <p> {result.snippet}</p>
+            <Link href={`${result.link}`} target="_blank">
+              {result.link}
+            </Link>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 };

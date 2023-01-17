@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import SearchList from '../../Components/Search/SearchList';
 import React from 'react';
 
 const search = async (searchTerm) => {
@@ -12,23 +12,8 @@ const search = async (searchTerm) => {
 const SearchResult = async ({ params }) => {
   const { searchTerm } = params;
   const searchResults = await search(searchTerm);
-  console.log(searchResults);
-  return (
-    <div>
-      <p className="text-gray-500 text-sm">You searched for: {searchTerm} </p>
-      <ol className="space-y-5 p-5">
-        {searchResults?.organic_results.map((result, idx) => (
-          <li key={idx} className="list-decimal">
-            <p className="font-bold">{result.title} </p>
-            <p> {result.snippet}</p>
-            <Link href={`${result.link}`} target="_blank">
-              {result.link}
-            </Link>
-          </li>
-        ))}
-      </ol>
-    </div>
-  );
+
+  return <SearchList searchTerm={searchTerm} searchResults={searchResults} />;
 };
 
 export default SearchResult;
