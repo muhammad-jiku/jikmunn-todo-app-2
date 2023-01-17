@@ -1,5 +1,7 @@
-import SearchList from '../../../Components/Search/SearchList';
 import React from 'react';
+
+// internal import
+import SearchList from '../../../Components/Search/SearchList';
 
 const search = async (searchTerm) => {
   const res = await fetch(

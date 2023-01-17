@@ -1,10 +1,7 @@
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
-import styles from './page.module.css';
-import TodoList from './Components/Todos/TodoList';
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 
-const inter = Inter({ subsets: ['latin'] });
+// internal import
+import TodoList from './Components/Todos/TodoList';
 
 export default function Home() {
   return (

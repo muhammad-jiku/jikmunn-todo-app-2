@@ -1,5 +1,7 @@
-import { notFound } from 'next/navigation';
 import React from 'react';
+import { notFound } from 'next/navigation';
+
+//  internal import
 import NotFound from '../NotFound/NotFound';
 
 const fetchTodo = async (todoId) => {
@@ -11,11 +13,11 @@ const fetchTodo = async (todoId) => {
 };
 
 const SingleTodo = async ({ todoId }) => {
-  // const { todoId } = params;
   const todo = await fetchTodo(todoId);
-  // console.log(todo);
+
   if (!todo?.id) return <NotFound />;
   // if (!todo?.id) return notFound();
+
   return (
     <div className="p-10 bg-yellow-200 border-2 m-2 shadow-lg">
       <p>

@@ -1,5 +1,7 @@
-import SingleTodo from '../../../Components/Todos/SingleTodo';
 import React from 'react';
+
+// internal import
+import SingleTodo from '../../../Components/Todos/SingleTodo';
 
 const TodoId = async ({ params }) => {
   const { todoId } = params;
